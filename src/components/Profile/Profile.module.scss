@@ -8,7 +8,6 @@
 
 .description {
   text-align: center;
-  padding: 30px;
 }
 
 .avatar {
@@ -42,4 +41,28 @@
   font-size: 15px;
   line-height: 100%;
   margin-bottom: 10px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  height: 30%;
+  background-color: aquamarine;
+}
+
+.stats + .item {
+  margin-left: 5%;
+}
+
+.item:not(:last-child) {
+  border-right: 1px solid rgb(40, 156, 131);
 }
