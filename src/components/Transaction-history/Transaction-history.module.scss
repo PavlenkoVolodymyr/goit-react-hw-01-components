@@ -1,0 +1,29 @@
+.table {
+  text-align: center;
+  width: 100%;
+  // background-color: aquamarine;
+  overflow: hidden;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.line {
+  padding: 20px 0;
+}
+
+.thead {
+  background-color: rgb(40, 156, 131);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 100%;
+}
+
+.row:nth-child(n) {
+  background-color: rgb(186, 197, 124);
+  color: black;
+}
+
+.row:nth-child(2n) {
+  background-color: aquamarine;
+  color: black;
+}
