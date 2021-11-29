@@ -7,10 +7,10 @@ function FriendList({ friendlist = [] }) {
     <ul className={s.list}>
       {friendlist.map(el => (
         <FriendItem
+          key={el.id}
           avatar={el.avatar}
           name={el.name}
           isOnline={el.isOnline}
-          key={el.id}
         />
       ))}
     </ul>
@@ -20,6 +20,9 @@ function FriendList({ friendlist = [] }) {
 FriendList.propTypes = {
   friendlist: PropTypes.arrayOf(
     PropTypes.shape({
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
       id: PropTypes.number.isRequired,
     }),
   ),
