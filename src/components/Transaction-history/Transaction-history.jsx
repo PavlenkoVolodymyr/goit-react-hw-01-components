@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import s from './Transaction-history.modules.sass';
+import s from './Transaction-history.module.sass';
 
 function TransactionHistory({ transactions }) {
   return (

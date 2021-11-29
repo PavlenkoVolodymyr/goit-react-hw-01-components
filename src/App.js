@@ -1,4 +1,3 @@
-// import './App.css';
 import friends from './components/FriendList/friends.json';
 import user from './components/Profile/user.json';
 import data from './components/Statistics/data.json';

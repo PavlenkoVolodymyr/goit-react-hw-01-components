@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import s from './Statistics.modules.sass';
+import s from './Statistics.module.scss';
 
 function Statistics({ title = '', stats }) {
   return (
-    <section class="statistics">
+    <section className={s.statistics}>
       {title && <h2 className={s.title}>{title}</h2>}
       <ul className={s.list}>
         {stats.map(el => {
