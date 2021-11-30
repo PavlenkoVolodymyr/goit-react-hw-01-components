@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import s from './Statistics.module.scss';
+import getRandomColor from '../../helpers/getRandomColor';
 
 function Statistics({ title = '', stats }) {
   return (
@@ -8,13 +9,7 @@ function Statistics({ title = '', stats }) {
       <ul className={s.list}>
         {stats.map(el => {
           return (
-            <li
-              key={el.id}
-              className={s.item}
-              style={{
-                backgroundColor: `#${Math.random().toString(16).slice(2, 8)}`,
-              }}
-            >
+            <li key={el.id} className={s.item} style={getRandomColor()}>
               <span className={s.label}>{el.label}</span>
               <span className={s.percentage}>{el.percentage}%</span>
             </li>
@@ -24,6 +19,8 @@ function Statistics({ title = '', stats }) {
     </section>
   );
 }
+
+Statistics.defaultProps = {};
 
 Statistics.propTypes = {
   title: PropTypes.string,

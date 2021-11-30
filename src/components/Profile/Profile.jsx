@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import s from './Profile.module.scss';
 
 function Profile({ username, tag, location, avatar, stats = {} }) {
-  console.log(s);
   return (
     <div className={s.profile}>
       <div className={s.description}>
@@ -29,6 +28,18 @@ function Profile({ username, tag, location, avatar, stats = {} }) {
     </div>
   );
 }
+
+Profile.defaultProps = {
+  username: 'Jacques Gluke',
+  tag: 'jgluke',
+  location: 'Ocho Rios, Jamaica',
+  avatar: 'https://cdn-icons-png.flaticon.com/512/2922/2922506.png',
+  stats: {
+    followers: 5603,
+    views: 4827,
+    likes: 1308,
+  },
+};
 
 Profile.propTypes = {
   username: PropTypes.string.isRequired,
